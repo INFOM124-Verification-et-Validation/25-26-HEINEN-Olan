@@ -26,10 +26,6 @@ public class ClydeTest {
     private final LevelFactory levelFactory = new LevelFactory(sprites,ghostFactory);
     private final GhostMapParser ghostMapParser = new GhostMapParser(levelFactory,boardFactory,ghostFactory);
 
-    @BeforeEach
-    void setUp() {
-    }
-
     @Test
     void noPacman() {
         char[][] map = {"############".toCharArray(), "#P         C#".toCharArray(), "############".toCharArray()};
