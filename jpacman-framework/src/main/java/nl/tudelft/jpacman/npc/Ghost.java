@@ -33,7 +33,8 @@ public abstract class Ghost extends Unit {
     private final int intervalVariation;
 
     private int random(int i) {
-        return new Random().nextInt(i);
+        int r = new Random().nextInt(i);
+        return r;
     }
 
     /**
