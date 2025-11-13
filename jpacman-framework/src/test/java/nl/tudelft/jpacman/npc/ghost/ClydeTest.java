@@ -21,7 +21,7 @@ public class ClydeTest {
     private Clyde clyde;
     private final PacManSprites sprites = new PacManSprites();
     private final GhostFactory ghostFactory = new GhostFactory(sprites);
-    private PlayerFactory playerFactory = new PlayerFactory(sprites);
+    private final PlayerFactory playerFactory = new PlayerFactory(sprites);
     private final BoardFactory boardFactory = new BoardFactory(sprites);
     private final LevelFactory levelFactory = new LevelFactory(sprites,ghostFactory);
     private final GhostMapParser ghostMapParser = new GhostMapParser(levelFactory,boardFactory,ghostFactory);
