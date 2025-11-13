@@ -32,7 +32,7 @@ public abstract class Ghost extends Unit {
      */
     private final int intervalVariation;
 
-    private final Random random = new Random();
+    private Random random;
 
     /**
      * Calculates the next move for this unit and returns the direction to move
@@ -66,6 +66,7 @@ public abstract class Ghost extends Unit {
         this.sprites = spriteMap;
         this.intervalVariation = intervalVariation;
         this.moveInterval = moveInterval;
+        this.random = new Random();
     }
 
     @Override
