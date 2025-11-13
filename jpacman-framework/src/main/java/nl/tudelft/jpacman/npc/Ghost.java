@@ -32,10 +32,7 @@ public abstract class Ghost extends Unit {
      */
     private final int intervalVariation;
 
-    private int random(int i) {
-        int r = new Random().nextInt(i);
-        return r;
-    }
+    private final Random random = new Random();
 
     /**
      * Calculates the next move for this unit and returns the direction to move
@@ -82,7 +79,7 @@ public abstract class Ghost extends Unit {
      * @return The suggested delay between moves in milliseconds.
      */
     public long getInterval() {
-        return this.moveInterval + random(this.intervalVariation);
+        return this.moveInterval + random.nextInt(this.intervalVariation);
     }
 
     /**
@@ -102,7 +99,7 @@ public abstract class Ghost extends Unit {
         if (directions.isEmpty()) {
             return null;
         }
-        int i = random(directions.size());
+        int i = random.nextInt(directions.size());
         return directions.get(i);
     }
 }
