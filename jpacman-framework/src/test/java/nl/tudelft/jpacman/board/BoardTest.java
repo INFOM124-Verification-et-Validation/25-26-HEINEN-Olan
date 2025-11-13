@@ -51,6 +51,6 @@ class BoardTest {
         "0, 1"
     })
     void testSquareAt(int x, int y) {
-        assertThat(board.withinBorders(x,y)).isEqualTo(true);
+        assertThat(board.withinBorders(x,y)).isTrue();
     }
 }
